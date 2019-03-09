@@ -11,7 +11,7 @@ public class Checker {
     private static Logger log = Logger.getLogger(Checker.class.getName());
     private static TernarySearchTreeImpl tst = new TernarySearchTreeImpl();
     private static TernaryNode ternaryNode = new TernaryNode();
-    private int EDIT_LIMIT = 4;
+    private int EDIT_LIMIT = 3;
     private int SUGGESTED_WORD_LIST_LIMIT = 10;
     private String inputString = "";
     private PriorityQueue<PriorityQueeImpl> suggestedWords = new PriorityQueue<PriorityQueeImpl>(10);
