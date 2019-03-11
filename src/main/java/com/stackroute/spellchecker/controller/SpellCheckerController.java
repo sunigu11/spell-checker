@@ -23,7 +23,7 @@ public class SpellCheckerController {
     String query = "" ;
     @GetMapping("wordlist")
     public ResponseEntity<?> check(){
-        String input = "WHAT IS";
+        String input = "ABSTRACTION";
         String inputArr[] = input.split(" ");
         for(int i=0;i<inputArr.length;i++){
             linkedHashMap = checker.correct(inputArr[i]);

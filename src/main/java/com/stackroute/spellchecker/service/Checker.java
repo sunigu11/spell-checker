@@ -85,7 +85,7 @@ public class Checker {
         System.out.println(str+"stringcheck<<<<<<<<<<<<<<<<<<<<<<<<");
         traverse(tst.getRoot(), "");
         System.out.println("after................................");
-        // adding words to linkedHashMap for output.
+      //  /94./ adding words to linkedHashMap for output.
         LinkedHashMap<String, Integer> outputMap = new LinkedHashMap<String, Integer>();
         for (int i = 0; suggestedWords.isEmpty() == false && i < SUGGESTED_WORD_LIST_LIMIT; i++) {
 
