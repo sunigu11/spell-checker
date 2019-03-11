@@ -1,6 +1,5 @@
 package com.stackroute.spellchecker.domain;
 
-import com.stackroute.spellchecker.domain.TernaryNode;
 
 public class TernarySearchTreeImpl {
     private TernaryNode root;
@@ -35,7 +34,6 @@ public class TernarySearchTreeImpl {
             if (pos + 1 == word.length()) {
                 node.setIsEnd(true);
                 node.setFrequency(frequency);
-                //System.out.println("implCHECK ...................."+ node.getData());
                 return node;
             }
         }
@@ -48,7 +46,6 @@ public class TernarySearchTreeImpl {
             if (pos + 1 < word.length()) {
                 node.setEqual(insert(node.getEqual(), word, frequency, pos + 1));
             } else {
-                // we encountered end of a word
                 node.setIsEnd(true);
                 node.setFrequency(frequency);
             }

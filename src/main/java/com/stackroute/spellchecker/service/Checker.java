@@ -88,12 +88,13 @@ public class Checker {
         // adding words to linkedHashMap for output.
         LinkedHashMap<String, Integer> outputMap = new LinkedHashMap<String, Integer>();
         for (int i = 0; suggestedWords.isEmpty() == false && i < SUGGESTED_WORD_LIST_LIMIT; i++) {
-            System.out.println("checking outmap");
+
             PriorityQueeImpl element = suggestedWords.poll();
             outputMap.put(element.getWord(), element.getDistance());
+            System.out.println("checking outmap"+ outputMap.keySet());
             System.out.println("check element "+element.getWord()+element.getFrequency());
+            break;
         }
-
         return outputMap;
     }
 
