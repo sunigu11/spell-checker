@@ -1,6 +1,8 @@
 package com.stackroute.spellchecker.service;
 
+import com.stackroute.spellchecker.domain.PriorityQueeImpl;
 import com.stackroute.spellchecker.domain.TernaryNode;
+import com.stackroute.spellchecker.domain.TernarySearchTreeImpl;
 
 import java.util.LinkedHashMap;
 import java.util.PriorityQueue;
@@ -14,13 +16,14 @@ public class Checker {
     private int EDIT_LIMIT = 3;
     private int SUGGESTED_WORD_LIST_LIMIT = 10;
     private String inputString = "";
-    private PriorityQueue<PriorityQueeImpl> suggestedWords = new PriorityQueue<PriorityQueeImpl>(10);
+    private static PriorityQueue<PriorityQueeImpl> suggestedWords = new PriorityQueue<PriorityQueeImpl>(10);
+   // LinkedHashMap<String, Integer> outputMap = new LinkedHashMap<String, Integer>();
 
     // create the ternary search tree and populate with words.
     static {
-
-        System.out.println("*******************************");
-        System.out.println("hello this is ------"+WordTree.createTree(tst));
+        WordTree.createTree(tst);
+        //System.out.println("*******************************");
+       // System.out.println("hello this is ------"+);
     }
 
     /**
@@ -101,6 +104,7 @@ public class Checker {
             return;
         //System.out.println("checking traverse .........................");
         int distance = getEditDistance(inputString, str + root.getData());
+        System.out.println("checking root data traverse " + root.getData());
         // skip traversing the nodes below which distance is grater than
         // EDIT_LIMIT.
         if ((str.length() < inputString.length())

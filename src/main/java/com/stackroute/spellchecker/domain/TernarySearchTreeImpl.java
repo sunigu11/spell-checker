@@ -1,4 +1,4 @@
-package com.stackroute.spellchecker.service;
+package com.stackroute.spellchecker.domain;
 
 import com.stackroute.spellchecker.domain.TernaryNode;
 

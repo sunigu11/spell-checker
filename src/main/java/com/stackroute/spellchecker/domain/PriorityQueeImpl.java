@@ -1,4 +1,4 @@
-package com.stackroute.spellchecker.service;
+package com.stackroute.spellchecker.domain;
 
 public class PriorityQueeImpl implements Comparable<PriorityQueeImpl>{
     private String word = "";
